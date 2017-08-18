@@ -40,12 +40,12 @@ var Saved = React.createClass({
 						{this.props.savedResults.map(function(result, i) {
 							return (
 								<div className="well well-lg" key={i}>
-									<div className="col-md-10 col-sm-9">
+									<div className="col-md-9 col-sm-9">
 										<a href={result.url} target="_blank"><h3 className="article-title">{result.title}</h3></a>
 										<p><span className="article-author">{result.author}</span> <span className="article-date">{moment(result.published).format("MMMM D, YYYY")}</span></p>
 										<p className="article-snippet">{result.snippet}</p>
 									</div>
-									<div className="col-md-2 col-sm-3">
+									<div className="col-md-3 col-sm-3">
 										<button className="btn btn-default trash-article" data-id={result._id} onClick={this.handleClick.bind(this, result)}><i className="fa fa-trash" aria-hidden="true"></i> TRASH</button>
 									</div>
 								</div>
